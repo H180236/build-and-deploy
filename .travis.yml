@@ -1,10 +1,17 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-  - npm run build
-  - npm test
-  - npm run build
+- npm run build
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  app: oystein-build-and-deploy
+  skip_cleanup: true
+  api_key:
+    secure: QXNT7Vy+QSCHkz5QVKcjFMDjPw6lI2iqhSmJrj03pMsLEtSF1yd96mAMSR02wSU55vxW99TQdro6JWadv+V/Xyn0DcW9lhqsBONJh0atzkPfzS6lIatdcZHyOwKe0GsC9FroOeCq7J4ibW3ev0Ba3aKaqvYP1dZFDdm2y3iS20WMiGCUvOehf8bKYRRBV1tLBLbq6+pgPVCteDupjBnhfGO+rtrULjJ3WEW/xR0kyQiRvZL3ue7nI+7rkcOugrhsux7MRPoLO6UGkFOT5+ztpF49+7fsfkcmP6wwv0C1M4XZvH3mSKx1M/cqDA/KYqnQzIGXGYWXX84B+t1ApgDOo3HLCFp4MXcgLVE0UFbEiZ31pnA6fKwrqfm/iOrQKCs5O0y/yvaD9mKECsg5iaF0rYOgblqsLGN/uSUnxS2d3R1UDcr+nYC2TB/5Ld0A2II5yk8dw7vGoH/C/MPXnvcG89QYDre00/nLPII9pt9GifL387BG0hsvckt+UfvcIloihlDH+ZXAmBXBgOGFkmWGZ/zd7P+TxxxFL/IjgyL4F/0YysCYBicyUQfs+UeShz+3P1aaqnR+zRkQ/xeKxzFvihbaSVqKE3MW0BSPhwyA/eEPaY+s53176Jw0G53eUQ9N1WFZweZsL155i+Dtj7rPZYNCO3AqawlFar3vJn1J2ds=
+  
